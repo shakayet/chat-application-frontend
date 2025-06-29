@@ -85,16 +85,18 @@ const Chat = () => {
           {messageList.map((message) => (
             <div
               key={message._id}
-              className={`flex ${message.senderId !== userInfo.id
+              className={`flex ${
+                message.senderId !== userInfo.id
                   ? "justify-start"
                   : "justify-end"
-                }`}
+              }`}
             >
               <div
-                className={`p-3 rounded-lg ${message.senderId !== userInfo.id
+                className={`p-3 rounded-lg ${
+                  message.senderId !== userInfo.id
                     ? "bg-blue-200 text-left"
                     : "bg-green-200 text-right"
-                  }`}
+                }`}
               >
                 {message.text}
               </div>
